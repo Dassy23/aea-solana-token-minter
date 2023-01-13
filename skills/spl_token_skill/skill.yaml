@@ -2,15 +2,16 @@ name: spl_token_skill
 author: dassy23
 version: 0.1.0
 type: skill
-description: The token program skill creates a token mint and distributes to 2 wallets every tick interval.
+description: The token program skill creates a token mint and distributes to 2 wallets
+  every tick interval.
 license: Apache-2.0
 aea_version: '>=1.0.0, <2.0.0'
 fingerprint:
   __init__.py: bafybeidkfrbgtz3fnd5vvigt4aqpiggpo5dorwvdxyh4w5t76ihqynajeu
-  behaviours.py: bafybeieyp6xmp4hot6zvd7q4ktfqob46og6hf3cf6rwckxnn32uhmt2f5e
+  behaviours.py: bafybeiblg5crvyfdxirohyrb5skhqynbym22sgid64xhxgm7le4yrxxaii
   dialogues.py: bafybeibuxis4u7wmmwvnfknvok4ijnl2qkzaf6mzcsduwqv2vgkstmdzeq
-  handlers.py: bafybeialcaqz6hpsf5urgefwenkxjhuzhjdb4mnxxjajy2uuy5hnbufrce
-  strategy.py: bafybeiei5amc5yxto43v4zfvziiq5z5oifnsmfzywgpc7v2qkazsopzwva
+  handlers.py: bafybeicd2xc6nesttzvk5iqdjkgi73kowigcakvq53xcnzl6olmvvml5km
+  strategy.py: bafybeihye52jt3kakwvh5nhwfcg3nm3tdolhoptcx7ddmhjy74msnvmh5y
 fingerprint_ignore_patterns: []
 connections:
 - valory/ledger:0.19.0:bafybeift7fx4vp2jq4btplocifby2xnnbzxppxdttgyyvwepj5cv7akfom
@@ -28,12 +29,12 @@ behaviours:
       service_interval: 30
     class_name: TokenProgramBehaviour
 handlers:
-  ledger_handler:
-    args: {}
-    class_name: TokenProgramHandler
   contract_handler:
     args: {}
     class_name: ContractApiHandler
+  ledger_handler:
+    args: {}
+    class_name: TokenProgramHandler
   signing_handler:
     args: {}
     class_name: SigningHandler
@@ -55,8 +56,8 @@ models:
     class_name: SigningDialogues
   strategy:
     args:
-      mint_seed: "themintseed1"
       mint_amount: 1
+      mint_seed: themintseed1
     class_name: Strategy
 dependencies: {}
 is_abstract: false

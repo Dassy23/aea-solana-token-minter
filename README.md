@@ -10,21 +10,39 @@ The project is simple solana token minter. Creates a token mint if not already t
    ```sh
    git clone https://github.com/Dassy23/aea-solana-token-minter.git
    ```
-2. Install packages & write private key to file
+2. Install packages
+
    ```sh
-   pip ins
+   PIPENV_IGNORE_VIRTUALENVS=1 && pipenv --python 3.10 && pipenv shell
+   git clone https://github.com/Dassy23/aea-ledger-solana.git
+   cd aea-ledger-solana
+   python setup.py install
+   cd ..
+   rm -rf aea-ledger-solana
+
+   pip install open-aea['all']
+   aea generate-key solana
+   aea add-key solana
+   aea get-address solana
+   aea generate-wealth solana
    ```
+
+3. run
+
+```
+aea run
+
+```
 
 <!-- USAGE EXAMPLES -->
 
 ## Usage
 
-The auto harvester has a number of configurable parameters available in /skills/harvester/skill.yaml
-
 Config these parameters
 
-- service_interval = time in seconds as to how frequently the harvest is performed.
-- min_sushi = minimum sushi after which to collect yield. (In gwei)
+- service_interval = time in seconds as to how frequently the mint is performed.
+- mint_seed = seed used to create the mint pda
+- mint_amount = amount to mint per interval
 
 ```
 pipenv run agent

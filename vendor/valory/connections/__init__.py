@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # ------------------------------------------------------------------------------
 #
-#   Copyright 2023 valory
+#   Copyright 2022 Valory AG
 #
 #   Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
@@ -17,14 +17,4 @@
 #
 # ------------------------------------------------------------------------------
 
-"""
-This module contains the support resources for the contract_api protocol.
-
-It was created with protocol buffer compiler version `libprotoc 3.19.4` and aea protocol generator version `1.0.0`.
-"""
-
-from packages.valory.protocols.contract_api.message import ContractApiMessage
-from packages.valory.protocols.contract_api.serialization import ContractApiSerializer
-
-
-ContractApiMessage.serializer = ContractApiSerializer
+"""This module contains the connection packages authored by Valory AG"""

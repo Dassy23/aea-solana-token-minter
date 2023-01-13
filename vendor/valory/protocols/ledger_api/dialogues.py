@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # ------------------------------------------------------------------------------
 #
-#   Copyright 2022 valory
+#   Copyright 2023 valory
 #
 #   Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
@@ -60,8 +60,7 @@ class LedgerApiDialogue(Dialogue):
         LedgerApiMessage.Performative.BALANCE: frozenset(),
         LedgerApiMessage.Performative.ERROR: frozenset(),
         LedgerApiMessage.Performative.GET_BALANCE: frozenset(
-            {LedgerApiMessage.Performative.BALANCE,
-                LedgerApiMessage.Performative.ERROR}
+            {LedgerApiMessage.Performative.BALANCE, LedgerApiMessage.Performative.ERROR}
         ),
         LedgerApiMessage.Performative.GET_RAW_TRANSACTION: frozenset(
             {
@@ -70,8 +69,7 @@ class LedgerApiDialogue(Dialogue):
             }
         ),
         LedgerApiMessage.Performative.GET_STATE: frozenset(
-            {LedgerApiMessage.Performative.STATE,
-                LedgerApiMessage.Performative.ERROR}
+            {LedgerApiMessage.Performative.STATE, LedgerApiMessage.Performative.ERROR}
         ),
         LedgerApiMessage.Performative.GET_TRANSACTION_RECEIPT: frozenset(
             {
@@ -87,11 +85,7 @@ class LedgerApiDialogue(Dialogue):
             }
         ),
         LedgerApiMessage.Performative.STATE: frozenset(),
-        LedgerApiMessage.Performative.TRANSACTION_DIGEST: frozenset(
-            {
-                LedgerApiMessage.Performative.GET_TRANSACTION_RECEIPT
-            }
-        ),
+        LedgerApiMessage.Performative.TRANSACTION_DIGEST: frozenset(),
         LedgerApiMessage.Performative.TRANSACTION_RECEIPT: frozenset(),
     }
 

@@ -6,16 +6,9 @@ description: The scaffold contract scaffolds a contract to be implemented by the
 license: Apache-2.0
 aea_version: '>=1.0.0, <2.0.0'
 fingerprint:
-  .gitignore: bafybeiad6amlgdhzz2udau2em427te4cjvwkhvafio4wnmtky5pblarbye
-  .pytest_cache/.gitignore: bafybeibrpk3xxqrmgsj3vqq75t4gr7qam2bs5njip6sk7mzz56skwc7ydu
-  .pytest_cache/CACHEDIR.TAG: bafybeiezngzmvefos2bjynwuepoajjhfippta52cw2ae6gobhvy23j5qgm
-  .pytest_cache/README.md: bafybeiacchqprleso5khz3wzc6lqafwipb4q6axwiisocruiubctvff47y
-  .pytest_cache/v/cache/stepwise: bafybeidohhysvjqyajhuw2otvtfpswexy7nrdpnpsmkfa3zjitlso2usnq
-  .vscode/launch.json: bafybeigtdz4xri7derk47dyyrnocsjvtgspftdjska2fps6i26eyyjtmsi
-  .vscode/settings.json: bafybeicq5y6gm25cpqbq2uhzeno5lbg4665h6ravvasyvwg365xdbk7w5u
   README.md: bafybeihlpftteapynqyb7abcmg6a2vuz5ujxu4y65dp3z4gzl42bt7a35y
   __init__.py: bafybeichmtrt2u4vmndzzu346kbfzjvhzllkzi4x6oens5wxd2pt5bhxzq
-  contract.py: bafybeibtqglqzeb2vxibvmv6p7acqga6mt45ccz4tgduvzitnfzccreb2a
+  contract.py: bafybeic46zvlsyyfzwyqylcfiub7t7y3qr4awyajpy42xvy6dinicqkpg4
   tests/__init__.py: bafybeiftu27piztiu5bfxbvhqsbppgtseykyfot6wtlrrzeuzya6zrgpky
   tests/test_contract.py: bafybeig2pocbs7flzrktf66leavv3ycrtisq7dur6zopkwz4gvskcexbba
 fingerprint_ignore_patterns: []
@@ -23,5 +16,5 @@ class_name: TokenProgram
 contract_interface_paths: {}
 dependencies:
   open-aea-ledger-solana:
-    version: ==1.24.7
+    version: ==1.24.8
 contracts: []
