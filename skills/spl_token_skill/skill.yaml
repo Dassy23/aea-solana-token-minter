@@ -1,0 +1,62 @@
+name: spl_token_skill
+author: dassy23
+version: 0.1.0
+type: skill
+description: The token program skill creates a token mint and distributes to 2 wallets every tick interval.
+license: Apache-2.0
+aea_version: '>=1.0.0, <2.0.0'
+fingerprint:
+  __init__.py: bafybeidkfrbgtz3fnd5vvigt4aqpiggpo5dorwvdxyh4w5t76ihqynajeu
+  behaviours.py: bafybeieyp6xmp4hot6zvd7q4ktfqob46og6hf3cf6rwckxnn32uhmt2f5e
+  dialogues.py: bafybeibuxis4u7wmmwvnfknvok4ijnl2qkzaf6mzcsduwqv2vgkstmdzeq
+  handlers.py: bafybeialcaqz6hpsf5urgefwenkxjhuzhjdb4mnxxjajy2uuy5hnbufrce
+  strategy.py: bafybeiei5amc5yxto43v4zfvziiq5z5oifnsmfzywgpc7v2qkazsopzwva
+fingerprint_ignore_patterns: []
+connections:
+- valory/ledger:0.19.0:bafybeift7fx4vp2jq4btplocifby2xnnbzxppxdttgyyvwepj5cv7akfom
+contracts: []
+protocols:
+- fetchai/default:1.0.0
+- fetchai/fipa:1.0.0
+- open_aea/signing:1.0.0:bafybeiambqptflge33eemdhis2whik67hjplfnqwieoa6wblzlaf7vuo44
+- valory/contract_api:1.0.0:bafybeiaxbrvgtbdrh4lslskuxyp4awyr4whcx3nqq5yrr6vimzsxg5dy64
+- valory/ledger_api:1.0.0:bafybeih7rhi5zvfvwakx5ifgxsz2cfipeecsh7bm3gnudjxtvhrygpcftq
+skills: []
+behaviours:
+  scaffold:
+    args:
+      service_interval: 30
+    class_name: TokenProgramBehaviour
+handlers:
+  ledger_handler:
+    args: {}
+    class_name: TokenProgramHandler
+  contract_handler:
+    args: {}
+    class_name: ContractApiHandler
+  signing_handler:
+    args: {}
+    class_name: SigningHandler
+models:
+  contract_api_dialogues:
+    args: {}
+    class_name: ContractApiDialogues
+  default_dialogues:
+    args: {}
+    class_name: DefaultDialogues
+  fipa_dialogues:
+    args: {}
+    class_name: FipaDialogues
+  ledger_api_dialogues:
+    args: {}
+    class_name: LedgerApiDialogues
+  signing_dialogues:
+    args: {}
+    class_name: SigningDialogues
+  strategy:
+    args:
+      mint_seed: "themintseed1"
+      mint_amount: 1
+    class_name: Strategy
+dependencies: {}
+is_abstract: false
