@@ -12,7 +12,7 @@ The project is simple solana token minter. Creates a token mint if not already t
    ```
 2. Install packages & write private key to file
    ```sh
-   pipenv run install
+   pip ins
    ```
 
 <!-- USAGE EXAMPLES -->
