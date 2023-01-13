@@ -18,7 +18,7 @@ The project is simple solana token minter. Creates a token mint if not already t
    cd aea-ledger-solana
    python setup.py install
    cd ..
-   rm -rf aea-ledger-solana
+   rm -rf aea-ledger-solana ## or dont
 
    pip install open-aea['all']
    aea generate-key solana
